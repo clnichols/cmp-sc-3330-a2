@@ -10,12 +10,17 @@ class PasswordResetRequest extends AbstractSupportRequest implements SupportRequ
     }
 
     @Override
-    int resolveFor(Technician technician) {
-        resolved = true; // 1. set to true
-        
+    int resolveFor(Technician technician) {        
         int servicePoints = basePoints;
 
-        technician.addPoints(servicePoints);
+        try {
+            technician.addPoints(servicePoints);
+        } catch(Exception e) {
+            System.out.println(e.getMessage());
+            resolved = false;
+        }
+
+        resolved = true; // if addPoints succeeds, set resolved to true
 
         return servicePoints;
     }
