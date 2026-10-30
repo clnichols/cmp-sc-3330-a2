@@ -15,9 +15,9 @@ class DeviceSetupRequest extends AbstractSupportRequest implements SupportReques
         
         int servicePoints = basePoints * deviceCount;
         
-        // technician.recievePts(basePoints);
+        technician.addPoints(servicePoints);
 
-        // return basePoints;
+        return servicePoints;
     }
 }
 

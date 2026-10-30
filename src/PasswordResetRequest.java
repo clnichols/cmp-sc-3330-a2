@@ -15,8 +15,8 @@ class PasswordResetRequest extends AbstractSupportRequest implements SupportRequ
         
         int servicePoints = basePoints;
 
-        // technician.recievePts(basePoints);
+        technician.addPoints(servicePoints);
 
-        // return basePoints;
+        return servicePoints;
     }
 }

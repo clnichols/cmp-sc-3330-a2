@@ -21,8 +21,8 @@ class NetworkIssueRequest extends AbstractSupportRequest implements SupportReque
 
         int servicePoints = basePoints + (affectedUsers * 2) + bonus;
         
-        technician.recievePts(basePoints);
+        technician.addPoints(servicePoints);
 
-        return basePoints; // awards exactly basePoints
+        return servicePoints;
     }
 }
