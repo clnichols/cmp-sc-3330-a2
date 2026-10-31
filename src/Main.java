@@ -21,7 +21,7 @@ public class Main {
         DeviceSetupRequest r1 = new DeviceSetupRequest(1, "Install WSL for 1050 students", 6, 10);
         DeviceSetupRequest r2 = new DeviceSetupRequest(2, "Set up dorm lab computers", 6, 15);
         PasswordResetRequest r3 = new PasswordResetRequest(3, "Reset account password", 10, "alice");
-        PasswordResetRequest r4 = new PasswordResetRequest(4, "Reset administrator password", 15, "bob");
+        PasswordResetRequest r4 = new PasswordResetRequest(4, "Reset administrator password", 15, "jake");
         // will recieve milestone bonus since affectedUsers >= 20
         NetworkIssueRequest r5 = new NetworkIssueRequest(5, "Network outage in Strickland Hall lab", 20, 25);
         NetworkIssueRequest r6 = new NetworkIssueRequest(6, "Slow network connection in Strickland room 212", 15, 8);
