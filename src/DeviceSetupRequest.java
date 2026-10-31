@@ -16,6 +16,7 @@ class DeviceSetupRequest extends AbstractSupportRequest implements SupportReques
         try {
             technician.addPoints(servicePoints);
         } catch(Exception e) {
+            // servicePoints added must be positive
             System.out.println(e.getMessage());
             resolved = false;
         }

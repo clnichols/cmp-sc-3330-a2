@@ -22,6 +22,7 @@ class NetworkIssueRequest extends AbstractSupportRequest implements SupportReque
         try {
             technician.addPoints(servicePoints);
         } catch(Exception e) {
+            // servicePoints added must be positive
             System.out.println(e.getMessage());
             resolved = false;
         }

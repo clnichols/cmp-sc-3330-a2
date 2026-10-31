@@ -16,6 +16,7 @@ class PasswordResetRequest extends AbstractSupportRequest implements SupportRequ
         try {
             technician.addPoints(servicePoints);
         } catch(Exception e) {
+            // servicePoints added must be positive
             System.out.println(e.getMessage());
             resolved = false;
         }

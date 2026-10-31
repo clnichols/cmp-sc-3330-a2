@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 class Technician {
-    public String name;
+    private final String name;
     private int servicePoints; 
 
     public Technician(String name) {
