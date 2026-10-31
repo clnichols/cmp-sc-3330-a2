@@ -1,3 +1,5 @@
+import java.util.List;
+
 class HelpDeskUtil {
     public static <T> void printAll(List<T> items) {
         for(T item : items) {
@@ -13,7 +15,7 @@ class HelpDeskUtil {
             if(technician == null) {
                 continue;
             }
-            
+
             sum += technician.getServicePoints();
         }
 

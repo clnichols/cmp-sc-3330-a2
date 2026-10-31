@@ -4,10 +4,10 @@ public abstract class AbstractSupportRequest implements SupportRequest {
     // All fields accessable by getters, therefore keep private
     private final int id; // keep id private and final (immutable)
     private final String title;
-    private int basePoints;
+    protected int basePoints;
     private boolean resolved;
 
-    public AbstractSupportRequest(int id, String title, boolean basePoints) {
+    public AbstractSupportRequest(int id, String title, int basePoints) {
         if (id <= 0) {
             throw new IllegalArgumentException("id must be > 0");
         }
@@ -39,6 +39,10 @@ public abstract class AbstractSupportRequest implements SupportRequest {
     public boolean isResolved() {
         // Returning resolved value is sufficient, no conditionals
         return resolved;
+    }
+
+    public void setResolved() { // make protected, only called by resolveFor() in subclasses
+        resolved = true;
     }
 
     // abstract method resolveFor() not required, implementation enforced by interface.
